@@ -115,6 +115,41 @@ If not, I highly recommend installing [rustup][rustup] (think `pip`, `npm` for R
 In case of troubles, check [rdedup building issues](https://github.com/dpc/rdedup/issues?q=is%3Aissue+is%3Aclosed+label%3Abuilding)
 or report a new one!
 
+## Build
+
+If you prefer to install from source, first clone the repository to a working
+directory:
+
+```
+git clone git@github.com:dpc/rdedup.git
+cd rdedup
+```
+
+Before building, you must also install the following dependencies which are not
+pulled in by cargo:
+
+|           | `libsodium`                                                       |
+| --------- | ----------------------------------------------------------------- |
+| Ubuntu    | `apt-get install libsodium-dev`                                   |
+| Arch      | `pacman -S libsodium`                                             |
+| Gentoo    | `emerge -a libsodium`                                             |
+| Source    | [Instructions](https://download.libsodium.org/doc/installation/)  |
+
+
+* libsodium
+  * Gentoo: `emerge -a libsodium`
+
+```
+# 
+
+# Gentoo
+emerge -a libsodium
+
+# From source
+# Follow instructions at 
+```
+
+
 ## Usage
 
 See `rdedup -h` for help.
